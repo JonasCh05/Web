@@ -1,0 +1,65 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+header{
+    display: flex;
+    min-height: 60px;
+    background-color: cornsilk;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+
+
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+
+
+}
+
+.logo img{
+    height: 70px;
+    margin-right: 10px;
+
+}
+
+nav a {
+    font-weight: 600;
+    padding-right: 10px;
+
+}
+
+nav a:hover{
+    color: white;
+
+}
+
+@media (max-width:700px){
+    header{
+    flex-direction: column;
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+}
+.content-header,
+.content,
+.contact {
+  padding-left: 20px; 
+  padding-right: 20px; 
+}
+
+h1{
+font-size: 2rem;
+color: rgb(9, 15, 20);
+margin-left: 10px;
+}
