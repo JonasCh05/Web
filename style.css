@@ -247,10 +247,17 @@ margin-left: 10px;
 
 .gracias {
   font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 50px;
   background-color: #fdfdfd;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
+
 
 .gracias h1 {
   color: #333;
@@ -259,14 +266,16 @@ margin-left: 10px;
 .btn-volver {
   display: inline-block;
   margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #d43f8d;
-  color: white;
+  padding: 10px 25px;
+  background-color: #000; /* negro */
+  color: #fff;            /* blanco */
   text-decoration: none;
   border-radius: 8px;
+  font-weight: bold;
   transition: background-color 0.3s;
 }
 
 .btn-volver:hover {
-  background-color: #b23073;
+  background-color: #333; /* gris oscuro al pasar el mouse */
 }
+
