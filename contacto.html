@@ -5,6 +5,10 @@
   <title>Contacto - Yenny Indumentaria</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/logo.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
 </head>
 
 <body>
@@ -17,17 +21,20 @@
       <a href="index.html" class="nav-link">Inicio</a>
       <a href="catalogo.html" class="nav-link">Catálogo</a>
       <a href="contacto.html" class="nav-link">Contacto</a>
-      <a href="sobre-nosotros.html" class="nav-link">Sobre nosotros</a>
     </nav>
   </header>
 
   <section class="content contact">
     <h2 class="title">¿Tienes algo para decirnos?</h2>
     <p>
-      A través de este formulario puedes enviarnos un mensaje para ayudarnos a mejorar, sugerir, o simplemente  . ¡Tu mensaje es bienvenido!
+      A través de este formulario puedes enviarnos un mensaje para ayudarnos a mejorar o sugerir  . ¡Tu mensaje es bienvenido!
     </p>
 
-    <form action="../../form-result.php" method="post" target="_blank" class="formulario">
+  <form action="https://formsubmit.co/jonasgalaxy12@gmail.com" method="POST" class="formulario">
+    <input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="Nuevo mensaje desde Yenny Indumentaria">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="http://127.0.0.1:5500/gracias.html">
       <fieldset>
         <legend>Mensaje</legend>
         <p>
@@ -50,9 +57,12 @@
       <fieldset>
         <legend>Tu producto favorito </legend>
         <p>¿Cuál es tu producto que te llama mas la atención?</p>
-        <label><input type="checkbox" name="Shorts"> Shorts</label>
-        <label><input type="checkbox" name="Camperas"> Camperas</label>
-        <label><input type="checkbox" name="Jeans"> Jeans</label>
+<label><input type="radio" name="Favorito" value="Shorts"> Shorts</label>
+<label><input type="radio" name="Favorito" value="Camperas"> Camperas</label>
+<label><input type="radio" name="Favorito" value="Jeans"> Jeans</label>
+<label><input type="radio" name="Favorito" value="No seleccionó" checked> Ninguno</label>
+
+
       </fieldset>
 
       <p>
@@ -85,10 +95,45 @@
 
     <h4>Horarios</h4>
     <p>🕒 Lunes a Sábado de 08:00 a 16:00 hs</p>
+   <h4>
+  <i class="fab fa-whatsapp" style="color: green; margin-right: 8px;"></i>
+  WhatsApp
+</h4>
+<a href="https://wa.me/541149730004" target="_blank">
+  Click aquí para contactar por WhatsApp
+</a>
 
     <h4>¡Te esperamos!</h4>
   </div>
 </section>
+<script>
+  document.querySelector(".formulario").addEventListener("submit", function (e) {
+    const nombre = document.querySelector('input[name="nombre"]');
+    const correo = document.querySelector('input[name="correo"]');
+    const mensaje = document.querySelector('textarea[name="mensaje"]');
+
+    let errores = [];
+
+    // Validaciones
+    if (nombre.value.trim().length < 3) {
+      errores.push("El nombre debe tener al menos 3 caracteres.");
+    }
+
+    const correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!correoRegex.test(correo.value)) {
+      errores.push("El correo electrónico no es válido.");
+    }
+
+    if (mensaje.value.trim().length < 10) {
+      errores.push("El mensaje debe tener al menos 10 caracteres.");
+    }
+
+    if (errores.length > 0) {
+      e.preventDefault(); // evita envío
+      alert("Errores:\n\n" + errores.join("\n"));
+    }
+  });
+</script>
 
 </body>
 </html>
