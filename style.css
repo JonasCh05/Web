@@ -97,21 +97,13 @@ nav a:hover{
   object-fit: cover;
 }
 
-.ubicacion {
-  display: flex;
-  gap: 40px;
-  padding: 20px 40px;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto; 
-}
 
 
 .mapa {
-  flex: 1 1 600px;
+  width: 100%;
+  max-width: 100%;
 }
+
 
 .info-contacto {
   flex: 1 1 300px;
@@ -138,16 +130,6 @@ nav a:hover{
 .info-contacto li {
   margin-bottom: 5px;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 @media (max-width:700px){
@@ -183,14 +165,6 @@ nav a:hover{
   font-size: 1.5rem;
   margin: 0;
 }
-
-
-
-
-
-
-
-
 
 
 .formulario {
@@ -267,8 +241,8 @@ margin-left: 10px;
   display: inline-block;
   margin-top: 20px;
   padding: 10px 25px;
-  background-color: #000; /* negro */
-  color: #fff;            /* blanco */
+  background-color: #000; 
+  color: #fff;            
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
@@ -276,6 +250,57 @@ margin-left: 10px;
 }
 
 .btn-volver:hover {
-  background-color: #333; /* gris oscuro al pasar el mouse */
+  background-color: #333; 
 }
 
+.contacto-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: flex-start;
+}
+
+
+
+
+
+.contacto-contenedor .formulario {
+  flex: 2;
+  min-width: 300px;
+}
+
+
+.contacto-contenedor .ubicacion {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-self: flex-start;
+}
+
+
+
+.mapa iframe {
+  width: 100%;
+  height: 200px;
+}
+
+.redes-sociales {
+  margin-top: 10px;
+}
+
+.redes-sociales a {
+  font-size: 2rem;
+  margin-right: 15px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.redes-sociales a:hover {
+  color: #000;
+}
